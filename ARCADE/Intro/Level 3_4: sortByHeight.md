@@ -29,7 +29,8 @@ Input/Output
 
     [input] array.integer a
 
-    If a[i] = -1, then the ith position is occupied by a tree. Otherwise a[i] is the height of a person standing in the ith position.
+    If a[i] = -1, then the ith position is occupied by a tree. Otherwise a[i] is the height of a person standing in 
+    the ith position.
 
     Constraints:
     5 ≤ a.length ≤ 15,
