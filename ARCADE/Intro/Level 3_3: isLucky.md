@@ -31,6 +31,7 @@ Input/Output
     [output] boolean
 
     true if n is a lucky ticket number, false otherwise.
+    
 
     ********************************************************
 
