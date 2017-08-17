@@ -1,4 +1,4 @@
-program ideone;
+program arrayMaxConsecutiveSum;
 
 Type
 	ArrayInteger = Array of integer;
