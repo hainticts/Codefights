@@ -1,4 +1,4 @@
-program codechef;
+program extraNumber;
 
 function extraNumber(a: integer; b: integer; c: integer): integer;
 var rs : integer;
