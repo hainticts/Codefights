@@ -1,3 +1,6 @@
+program lineEncoding;
+uses Sysutils;
+
 function lineEncoding(s: string): string;
 var i, j, count : integer;
     rs : string;
@@ -20,3 +23,9 @@ begin
     
     lineEncoding := rs;
 end;
+
+var s : string;
+begin
+	s := 'aabbbc';
+	writeln(lineEncoding(s));
+end.
