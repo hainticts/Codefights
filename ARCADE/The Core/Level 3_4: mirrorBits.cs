@@ -3,11 +3,12 @@
     public class Test
     {
     	public static int mirrorBits(int a) {
-           string s = Convert.ToString(a, 2);
-           string s1 = "";
-           for(int i = s.Length - 1; i >= 0; i--)
-             s1 += s[i];
-          return Convert.ToInt32(s1, 2);
+            int rs = 0;
+            while(a > 0){
+                rs = rs * 2 + (a % 2);
+                a /= 2;
+            }
+            return rs;
         }
         
     	public static void Main()
