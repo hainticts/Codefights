@@ -1,13 +1,39 @@
-    using System;
-     
-    public class Test
+using System;
+ 
+public class Test
+{
+	public static int differentRightmostBit(int n, int m)
     {
-    	public static int differentRightmostBit(int n, int m){
-            return -~((~(n ^ m)) ^ ((~(n ^ m)) + 1)) / 2;
-        }
-    	public static void Main()
-    	{
-    		int n = 11, m = 13;
-    		Console.Write(differentRightmostBit(n, m));
-    	}
-    }
+      return new Func<int>(() => 
+                   {
+                      string sn = reverse(Convert.ToString(n, 2));
+                      string sm = reverse(Convert.ToString(m, 2));
+                      if(sn.Length > sm.Length){
+                        for(int i = 0; i <= sn.Length - sm.Length; i++){
+                          sm += "0";
+                        }
+                      }
+                      else 
+                         if(sm.Length > sn.Length)
+                           for(int i = 0; i <= sm.Length - sn.Length; i++)
+                             sn += "0";
+                      for(int i = 0; i < sn.Length; i++){
+                        if(sm[i] != sn[i]) return (int)Math.Pow(2, i);
+                      }
+                      return 0;
+                   })() ;
+	}
+ 
+	public static string reverse(string s){
+	  var a = s.ToCharArray();
+	  Array.Reverse(a);
+	  return new string(a);
+	}
+	public static void Main()
+	{
+		int n = 11, m = 13;
+		Console.WriteLine(differentRightmostBit(n, m));
+		n = 7; m = 23;
+		Console.Write(differentRightmostBit(n, m));
+	}
+}
