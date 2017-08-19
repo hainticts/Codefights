@@ -1,4 +1,4 @@
-    using System;
+ using System;
      
     public class Test
     {
@@ -15,6 +15,8 @@
     	public static void Main()
     	{
     		int n = 902200100;
-    		Console.Write(increaseNumberRoundness(n));
+    		Console.WriteLine(increaseNumberRoundness(n));
+    		n = 11000;
+    		Console.WriteLine(increaseNumberRoundness(n));
     	}
     }
