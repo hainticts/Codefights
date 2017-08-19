@@ -1,4 +1,4 @@
-program codechef;
+program mirrorBits;
 
 function mirrorBits(a: integer): integer;
 var rs : integer;   
