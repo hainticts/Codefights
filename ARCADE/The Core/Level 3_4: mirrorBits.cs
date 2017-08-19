@@ -2,15 +2,14 @@
      
     public class Test
     {
-    	public static int mirrorBits(int a){
-            int b = 0;
-            while (a > 0){
-                b <<= 1;
-                b |= (a & 1);
-                a >>= 1;
-            }
-            return b;
+    	public static int mirrorBits(int a) {
+           string s = Convert.ToString(a, 2);
+           string s1 = "";
+           for(int i = s.Length - 1; i >= 0; i--)
+             s1 += s[i];
+          return Convert.ToInt32(s1, 2);
         }
+        
     	public static void Main()
     	{
     		int a = 97;
